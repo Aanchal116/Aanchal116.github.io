@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap" rel="stylesheet"> 
+</head>
+<body class="contact-body">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="resume.pdf">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+  <section class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <div class="contact-form">
+          <h2 class="form-title text-center mb-4">Get In Touch</h2>
+          <form id="gmailForm" onsubmit="openGmailCompose(); return false;">
+            <input type="hidden" id="to" name="to" value="aanchal1620@gmail.com">
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <textarea class="form-control" id="subject" name="message" rows="1" placeholder="Your subject" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="body" class="form-label">Message</label>
+              <textarea class="form-control" id="body" name="message" rows="4" placeholder="Your message" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-custom px-4">Send Message</button>
+            </div>
+          </form>
+          
+          <script>
+          function openGmailCompose() {
+            const to = document.getElementById('to').value;
+            const subject = document.getElementById('subject').value;
+            const body = document.getElementById('body').value;
+            
+            const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.open(gmailURL, '_blank');
+          }
+          </script>
+          <div class="socials"> <!-- Use home-socials class for the home page -->
+            <a href="https://github.com/Aanchal116" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/aanchal-pahal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aanchal1620@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>
