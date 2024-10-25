@@ -115,7 +115,7 @@ footer p {
 /* Experience Page Styling */
   
 .experience-section {
-    background-image:url('/static/images/experience.avif');
+    background-image:url('../images/experience.avif');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;              
@@ -179,7 +179,6 @@ footer p {
     width: 10px;
     height: 10px;
     background-color: rgb(13, 173, 173);
-    /* background-color: #007bff; */
     border-radius: 50%;
 }
 
@@ -215,7 +214,7 @@ footer p {
 /* Contact Page */
 
 .contact-body {
-    background-image:url('/static/images/contact.jpg');
+    background-image:url('../images/contact.jpg');
     overflow: hidden;
 }
 
